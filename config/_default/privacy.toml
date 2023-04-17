@@ -1,0 +1,12 @@
+# -------------------------------------------------------------------------------------
+# Privacy Configuration
+# See: https://gohugo.io/about/hugo-and-gdpr/
+# -------------------------------------------------------------------------------------
+
+# privacy of the Google Analytics (replaced by params.analytics.google)
+[privacy.googleAnalytics]
+  # ...
+[privacy.twitter]
+  enableDNT = true
+[privacy.youtube]
+  privacyEnhanced = true

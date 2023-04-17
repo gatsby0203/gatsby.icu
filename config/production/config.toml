@@ -1,0 +1,6 @@
+# -------------------------------------------------------------------------------------
+# Basic Configuration
+# Hugo Configuration See: https://gohugo.io/getting-started/configuration/
+# -------------------------------------------------------------------------------------
+
+baseURL = "http://gatsby.icu"

@@ -1,0 +1,23 @@
+# -------------------------------------------------------------------------------------
+# Basic Configuration
+# Hugo Configuration See: https://gohugo.io/getting-started/configuration/
+# -------------------------------------------------------------------------------------
+title = "gatsby.icu"
+baseURL = "http://localhost:1313"
+defaultContentLanguage = "en"
+# Default theme to be use when building the site with Hugo
+theme = "FixIt"
+# whether to use robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+enableGitInfo = true
+# whether to use emoji code
+enableEmoji = true
+# whether build drafts
+buildDrafts = false
+# whether use relative URLs
+relativeURLs = false
+# Length of post summery
+summaryLength = 150
+# ignore some build errors
+# ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]

@@ -1,0 +1,39 @@
+# -------------------------------------------------------------------------------------
+# Menu Configuration (Chinese)
+# See: https://fixit.lruihao.cn/theme-documentation-basics/#menu-advanced-configuration
+# -------------------------------------------------------------------------------------
+[[main]]
+  weight = 1
+  identifier = "posts"
+  pre = ""
+  post = ""
+  name = "所有文章"
+  url = "/posts/"
+  title = ""
+
+[[main]]
+  weight = 2
+  identifier = "tags"
+  pre = ""
+  post = ""
+  name = "标签"
+  url = "/tags/"
+  title = ""
+
+[[main]]
+  weight = 3
+  identifier = "categories"
+  pre = ""
+  post = ""
+  name = "分类"
+  url = "/categories/"
+  title = ""
+
+[[main]]
+  weight = 4
+  identifier = "about"
+  pre = ""
+  post = ""
+  name = "关于"
+  url = "/about/"
+  title = ""

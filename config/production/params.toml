@@ -1,0 +1,38 @@
+# -------------------------------------------------------------------------------------
+# Theme Core Configuration
+# See: https://fixit.lruihao.cn/theme-documentation-basics/#site-configuration
+# -------------------------------------------------------------------------------------
+
+[page.comment]
+  enable = true
+  # Waline comment config (https://waline.js.org)
+  [page.comment.waline]
+    enable = true
+    serverURL = "http://comment.gatsby.icu"
+    pageview = false
+    emoji = ["//unpkg.com/@waline/emojis@1.1.0/tw-emoji"]
+    meta = ["nick", "mail", "link"]
+    requiredMeta = ["nick", "mail"]
+    login = "enable"
+    wordLimit = 0
+    pageSize = 10
+    imageUploader = false
+    highlighter = true
+    comment = true
+    texRenderer = true
+    search = false
+    recaptchaV3Key = ""
+    reaction = false
+
+# Busuanzi count
+[ibruce]
+  enable = true
+  # Enable in post meta
+  enablePost = true
+
+# CDN config for third-party library files
+[cdn]
+  # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
+  # located in "themes/FixIt/assets/data/cdn/" directory
+  # you can store your own data files in the same path under your project: "assets/data/cdn/"
+  data = ""
