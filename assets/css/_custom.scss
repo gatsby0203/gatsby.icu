@@ -16,8 +16,7 @@
 .home {
   .home-profile {
     .github-banner {
-      min-height: 6.5em;
-      height: 8em;
+      height: auto;
       width: auto;
       [data-theme='dark'] & {
         filter: invert(100%) hue-rotate(200deg) saturate(1000%) brightness(45%) contrast(180%);
