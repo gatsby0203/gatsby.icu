@@ -29,4 +29,4 @@ jobs:
         with:
           author_name: Gatsby Van
           author_email: gatsby_van@163.com
-          message: 'Generate Contribution Snake'
+          message: ':recycle: Update Contribution Snake'
