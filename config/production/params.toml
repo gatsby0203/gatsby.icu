@@ -8,7 +8,7 @@
   # Waline comment config (https://waline.js.org)
   [page.comment.waline]
     enable = true
-    serverURL = "http://comment.gatsby.icu"
+    serverURL = "https://comment.gatsby.icu"
     pageview = false
     emoji = ["//unpkg.com/@waline/emojis@1.1.0/tw-emoji"]
     meta = ["nick", "mail", "link"]
