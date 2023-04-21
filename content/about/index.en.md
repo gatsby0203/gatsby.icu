@@ -1,6 +1,7 @@
 ---
 title: "About Me"
 date: 2023-04-16T00:00:00+08:00
+type: posts
 draft: true
 description: "About Me"
 
