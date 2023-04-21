@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------------
 
 # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-[markup.highlight]
+[highlight]
   codeFences = true
   guessSyntax = true
   lineNos = true
@@ -13,8 +13,8 @@
   noClasses = false
 
 # Goldmark is from Hugo 0.60 the default library used for Markdown
-[markup.goldmark]
-  [markup.goldmark.extensions]
+[goldmark]
+  [goldmark.extensions]
     definitionList = true
     footnote = true
     linkify = true
@@ -22,11 +22,20 @@
     table = true
     taskList = true
     typographer = true
-  [markup.goldmark.renderer]
+  [goldmark.parser]
+    autoHeadingID = true
+    autoHeadingIDType = "github"
+    wrapStandAloneImageWithinParagraph = true
+    [goldmark.parser.attribute]
+      block = true
+      title = true
+  [goldmark.renderer]
+    # By default, Goldmark ignores newlines within a paragraph. Set to true to render newlines as <br> elements.
+    hardWraps = false
     # whether to use HTML tags directly in the document
     unsafe = true
 
 # Table Of Contents settings
-[markup.tableOfContents]
+[tableOfContents]
   startLevel = 2
   endLevel = 6
