@@ -16,10 +16,11 @@
 .home {
   .home-profile {
     .github-banner {
+      max-width: 100%;
+      width: 45em;
       height: auto;
-      width: auto;
       [data-theme='dark'] & {
-        filter: invert(100%) hue-rotate(200deg) saturate(1000%) brightness(45%) contrast(180%);
+        filter: invert(100%) hue-rotate(180deg) saturate(180%) brightness(60%) contrast(140%);
       }
     }
   }
