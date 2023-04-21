@@ -191,7 +191,7 @@ disableThemeInject = false
     # whether to enable the table of the contents
     enable = true
     # whether to keep the static table of the contents in front of the post
-    keepStatic = true
+    keepStatic = false
     # whether to make the table of the contents in the sidebar automatically collapsed
     auto = true
     # position of TOC ["left", "right"]
