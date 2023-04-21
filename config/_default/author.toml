@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------------------------
 # Author Configuration
 # -------------------------------------------------------------------------------------
-name = "Gatsby Van"
-email = "gatsby_van@163.com"
-link = "gatsby.icu"
+name = "Gatsby"
+# email = "gatsby_van@163.com"
+link = "http://gatsby.icu"
 avatar = "/images/avatar.png"
