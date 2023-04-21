@@ -156,7 +156,7 @@ disableThemeInject = false
   twemoji = true
   # whether to enable lightgallery
   # if set to "force", images in the content will be forced to shown as the gallery.
-  lightgallery = false
+  lightgallery = true
   # whether to enable the ruby extended syntax
   ruby = true
   # whether to enable the fraction extended syntax
@@ -237,9 +237,9 @@ disableThemeInject = false
     # access token of Mapbox GL JS
     accessToken = ""
     # style for the light theme
-    lightStyle = "mapbox://styles/mapbox/light-v9"
+    lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
     # style for the dark theme
-    darkStyle = "mapbox://styles/mapbox/dark-v9"
+    darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
     # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
     navigation = true
     # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
@@ -400,8 +400,8 @@ disableThemeInject = false
 [gravatar]
   enable = true
   # Gravatar host, default: "www.gravatar.com"
-  host = "gravatar.loli.net" # "cn.gravatar.com", "gravatar.loli.net"
-  style = "mp" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+  host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
+  style = "mp" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
 
 # Back to top
 [backToTop]
