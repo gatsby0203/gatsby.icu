@@ -13,7 +13,7 @@ Waline is derived from [Valine][valine] and is a very simple and secure comment 
 
 <!--more-->
 
-Here are all the deploy methods supported by Waline. On a self host, you can choose to install it directly or in a Docker container. Waline supports various types of databases, including MongoDB, MySQL/MariaDB, SQLite, and PostgreSQL. This article mainly introduces the deploy procedure using MySQL/MariaDB as the database. (deploy with other databases is similar)
+Here are all the deploy methods supported by Waline. On a self host, you can choose to install it directly or in a Docker container. Waline supports various types of databases, including MongoDB, MySQL/MariaDB, TiDB, and PostgreSQL. This article mainly introduces the deploy procedure using MySQL/MariaDB as the database. (deploy with other databases is similar)
 
 |                                   |                          |                            |
 | ----------------------------------| :----------------------: | -------------------------- |
@@ -30,7 +30,7 @@ Here are all the deploy methods supported by Waline. On a self host, you can cho
 
 ## Prepare Database
 
-Open a MySQL prompt and create a new user for Waline to access the database (or use an existing user), then create a database for Waline. Grant the user all privilleges for that database.
+Open a MySQL prompt and create a new user for Waline to access the database (or use an existing user), then create a database for Waline. Grant the user all privileges for that database.
 
 ```mysql
 # Create user
@@ -60,7 +60,7 @@ ALTER USER <user> IDENTIFIED WITH mysql_native_password BY '<password>';
 
 {{< /admonition >}}
 
-Start a MySQL prompt with Waline's MySQL account, and import [waline.sql][waline_sql] to create the Waline datastructure.
+Start a MySQL prompt with Waline's MySQL account, and import [waline.sql][waline_sql] to create the Waline data structure.
 
 ```mysql
 USE <database_name>
@@ -143,7 +143,7 @@ Apr 21 15:25:50 my_server node[43772]: [2023-04-21T15:25:50.976] [43772] [INFO] 
 Apr 21 15:25:50 my_server node[43772]: [2023-04-21T15:25:50.977] [43772] [INFO] - Environment: production
 ```
 
-> If error occurs, you can use `sudo journalctl -u waline` to view the complete Waline running log for degugging.
+> If error occurs, you can use `sudo journalctl -u waline` to view the complete Waline running log for debugging.
 
 If Waline is running properly, you can access `http://<server IP or domain name>:8360/ui/register` to register a user account. The first registered user will automatically become an administrator.
 
