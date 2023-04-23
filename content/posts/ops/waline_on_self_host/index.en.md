@@ -15,18 +15,17 @@ Waline is derived from [Valine][valine] and is a very simple and secure comment 
 
 Here are all the deploy methods supported by Waline. On a self host, you can choose to install it directly or in a Docker container. Waline supports various types of databases, including MongoDB, MySQL/MariaDB, TiDB, and PostgreSQL. This article mainly introduces the deploy procedure using MySQL/MariaDB as the database. (deploy with other databases is similar)
 
-|                                   |                          |                            |
-| ----------------------------------| :----------------------: | -------------------------- |
-| **Client**                        | **Server**               | **Storage**                |
-| [@waline/client][waline_client]   | [Vercel][vercel]         | [LeanCloud][leancloud]     |
-| [MiniValine][minivaline]          | [Deta][data]             | [CloudBase][cloudbase]     |
-| [sodesu][sodesu]                  | [CloudBase][cloud_base]  | [MongoDB][mongodb]         |
-|                                   | [Railway][railway]       | [MySQL][mysql]             |
-|                                   | [Render][render]         | [SQLite][sqllite]          |
-|                                   | [Zeabur][zeabur]         | [PostgreSQL][postgresql]   |
-|                                   | [Netlify][netify]        | [GitHub][github]           |
-|                                   | Docker                   | [Deta Base][data_base]     |
-|                                   | Self Host                | [TiDB][tidb]               |
+| **Client**                      | **Server**                       | **Storage**                      |
+| :------------------------------:| :------------------------------: | :------------------------------: |
+| [@waline/client][waline_client] | [Vercel][vercel]                 | [LeanCloud][leancloud]           |
+| [MiniValine][minivaline]        | [Deta][data]                     | [CloudBase][cloudbase]           |
+| [sodesu][sodesu]                | [CloudBase][cloud_base]          | [MongoDB][mongodb]               |
+|                                 | [Railway][railway]               | [MySQL][mysql]                   |
+|                                 | [Render][render]                 | [SQLite][sqllite]                |
+|                                 | [Zeabur][zeabur]                 | [PostgreSQL][postgresql]         |
+|                                 | [Netlify][netify]                | [GitHub][github]                 |
+|                                 | Docker                           | [Deta Base][data_base]           |
+|                                 | Self Host                        | [TiDB][tidb]                     |
 
 ## Prepare Database
 

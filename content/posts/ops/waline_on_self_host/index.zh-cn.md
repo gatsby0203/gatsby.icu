@@ -15,20 +15,19 @@ Waline 从 [Valine][valine] 衍生而来，是一款简洁、安全的评论系�
 
 以下为 Waline 支持的所有部署方式，在个人服务器上可以选择在 Docker 容器中安装，也可以选择直接安装。Waline 数据库的支持十分多样，本地数据库有 MongoDB、MySQL/MariaDB、TiDB、PostgreSQL 四种选择。本文主要介绍的是以 MySQL/MariaDB 为后端数据库的部署流程，其他数据库的部署方式也完全类似。
 
-|                                   |                          |                            |
-| ----------------------------------| :----------------------: | -------------------------- |
-| **客户端脚本**                      | **服务端部署**             | **数据存储**                |
-| [@waline/client][waline_client]   | [Vercel][vercel]         | [LeanCloud][leancloud]     |
-| [MiniValine][minivaline]          | [Deta][data]             | [CloudBase][cloudbase]     |
-| [sodesu][sodesu]                  | [CloudBase][cloud_base]  | [MongoDB][mongodb]         |
-|                                   | [百度云 CFC][baidu_cfc]   | [MySQL][mysql]             |
-|                                   | [阿里云 FC][ali_cfc]      | [SQLite][sqllite]          |
-|                                   | [Railway][railway]       | [PostgreSQL][postgresql]   |
-|                                   | [Render][render]         | [GitHub][github]           |
-|                                   | [Zeabur][zeabur]         | [Deta Base][data_base]     |
-|                                   | [Netlify][netify]        | [TiDB][tidb]               |
-|                                   | Docker                   |                            |
-|                                   | 独立部署                  |                            |
+| **客户端脚本**                    | **服务端部署**                    | **数据存储**                     |
+| :------------------------------:| :------------------------------: | :------------------------------:|
+| [@waline/client][waline_client] | [Vercel][vercel]                 | [LeanCloud][leancloud]          |
+| [MiniValine][minivaline]        | [Deta][data]                     | [CloudBase][cloudbase]          |
+| [sodesu][sodesu]                | [CloudBase][cloud_base]          | [MongoDB][mongodb]              |
+|                                 | [百度云 CFC][baidu_cfc]           | [MySQL][mysql]                  |
+|                                 | [阿里云 FC][ali_cfc]              | [SQLite][sqllite]               |
+|                                 | [Railway][railway]               | [PostgreSQL][postgresql]        |
+|                                 | [Render][render]                 | [GitHub][github]                |
+|                                 | [Zeabur][zeabur]                 | [Deta Base][data_base]          |
+|                                 | [Netlify][netify]                | [TiDB][tidb]                    |
+|                                 | Docker                           |                                 |
+|                                 | 独立部署                           |                                 |
 
 ## 准备数据库
 
