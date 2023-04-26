@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "atomic-algolia": "^0.3.19"
+  },
+  "scripts": {
+    "algolia-en-update": "cross-env ALGOLIA_INDEX_NAME=index.en ALGOLIA_INDEX_FILE=public/index.json atomic-algolia",
+    "algolia-cn-update": "cross-env ALGOLIA_INDEX_NAME=index.zh-cn ALGOLIA_INDEX_FILE=public/zh-cn/index.json atomic-algolia"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

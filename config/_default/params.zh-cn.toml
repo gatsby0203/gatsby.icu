@@ -22,8 +22,8 @@
   absoluteURL = false
   [search.algolia]
     index = "index.zh-cn"
-    appID = "PASDMWALPK"
-    searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+    appID = "67YOP0R4NM"
+    searchKey = "f4a149a3fd525b6dc694078b9862da3e"
   [search.fuse]
     # https://fusejs.io/api/options.html
     isCaseSensitive = false
