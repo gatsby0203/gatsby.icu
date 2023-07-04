@@ -258,19 +258,19 @@ WITH_AKAROA=no
 
 解压后，打开“omnetpp-6.0/mingwenv.cmd”，第一次运行时会自行解压安装 MinGW 环境（不会与已有 MinGW 冲突），完成后会自动打开新的命令行窗口。
 
-{{< image src="images/Windows-OMNeT++_Compile-1.png" caption="Windows 首次运行 OMNeT++ 终端" title="Windows OMNeT++ Compile - 1">}}
+{{< image src="images/Windows-OMNeT++_Compile-1.webp" caption="Windows 首次运行 OMNeT++ 终端" title="Windows OMNeT++ Compile - 1">}}
 
 由于 Windows 安装包内包含了所有需要的依赖，无需安装额外的 Package，直接根据提示输入 `./configure` 脚本会自动根据当前用户配置生成 Makefile. Makefile 生成完之后根据提示输入 `make` 编译即可，编译过程会持续一段时间。此处可以设置 `make` 的 `-j` 参数，即同时允许执行的编译任务数量，这样可以更有效的利用CPU资源，加快编译的速度。例如 `make -j8`，让 `make` 最多允许 8 个编译任务同时执行。可设置为 CPU 的核心数或支持的线程 (Thread) 数，或者使用 `make -j$(nproc)` 以允许的最大进程数进行编译。
 
-{{< image src="images/Windows-OMNeT++_Compile-2.png" caption="Windows OMNeT++ configure 提示" title="Windows OMNeT++ configure Prompt">}}
+{{< image src="images/Windows-OMNeT++_Compile-2.webp" caption="Windows OMNeT++ configure 提示" title="Windows OMNeT++ configure Prompt">}}
 
-{{< image src="images/Windows-OMNeT++_Compile-3.png" caption="Windows OMNeT++ make 提示" title="Windows OMNeT++ make Prompt">}}
+{{< image src="images/Windows-OMNeT++_Compile-3.webp" caption="Windows OMNeT++ make 提示" title="Windows OMNeT++ make Prompt">}}
 
 {{< admonition tip >}}
 
 在 OMNeT++6.0 中编译完成之后，在 OMNeT++ 文件夹下会生成两个快捷方式，分别可用于启动 IDE 以及启动终端，可将快捷方式复制到桌面，以便快速启动OMNeT++.
 
-{{< image src="images/Windows-OMNeT++_Shortcut.png" caption="Windows OMNeT++ 快捷方式" title="Windows OMNeT++ Shortcut">}}
+{{< image src="images/Windows-OMNeT++_Shortcut.webp" caption="Windows OMNeT++ 快捷方式" title="Windows OMNeT++ Shortcut">}}
 
 {{< /admonition >}}
 
@@ -302,7 +302,7 @@ wsl.exe --install [Linux 发行版名称]
 
 [Linux 发行版名称] 填入自己想要安装的Linux发行版即可，通过指令 `wsl -l -o`，可以查看目前微软提供的在线可下载的所有发行版。
 
-{{< image src="images/WSL-Supported_Distributions.png" caption="WSL 支持的 Linux 发行版" title="WSL Supported Distributions">}}
+{{< image src="images/WSL-Supported_Distributions.webp" caption="WSL 支持的 Linux 发行版" title="WSL Supported Distributions">}}
 
 {{< admonition tip >}}
 
@@ -320,7 +320,7 @@ wsl.exe --install --web-download [Linux 发行版名称]
 
 一般默认会将 Linux 安装到 WSL2 上，可以通过指令 `wsl -l -v` 查看目前运行的 Linux 发行版以及相应的 WSL 版本。
 
-{{< image src="images/WSL-Installed_List.png" caption="WSL 已安装的发行版列表" title="WSL Installed List">}}
+{{< image src="images/WSL-Installed_List.webp" caption="WSL 已安装的发行版列表" title="WSL Installed List">}}
 
 如果已经有运行在 WSL1 上的 Linux 发行版，可以将其升级到 WSL2 上运行。
 
@@ -370,7 +370,7 @@ sudo zypper in xdg-utils
 
 完成以上步骤后参照 [Linux 下的 OMNeT++ 的安装](#linux) 进行安装即可。最终安装后的运行效果如下：
 
-{{< image src="images/WSL-WSLg_Home.png" caption="WSL+WSLg OMNeT++ 运行效果" title="WSL+WSLg OMNeT++ Installation">}}
+{{< image src="images/WSL-WSLg_Home.webp" caption="WSL+WSLg OMNeT++ 运行效果" title="WSL+WSLg OMNeT++ Installation">}}
 
 ##### Windows 10
 
@@ -417,7 +417,7 @@ sudo zypper in xdg-utils
 
 配置完成后启动 VcXsrv，注意每次运行GUI程序之前需要先在 Windows 上启动 VcXsrv。之后参照 [Linux 下的 OMNeT++ 的安装](#linux) 进行安装即可,最终安装完成后的效果如下：
 
-{{< image src="images/WSL-VcXsrv_Home.png" caption="WSL+VcXsrv OMNeT++ 运行效果" title="WSL+VcXsrv OMNeT++ Installation">}}
+{{< image src="images/WSL-VcXsrv_Home.webp" caption="WSL+VcXsrv OMNeT++ 运行效果" title="WSL+VcXsrv OMNeT++ Installation">}}
 
 ### macOS
 
@@ -438,7 +438,7 @@ xcode-select --install
 
 打开“系统偏好设置(System Preference)” →“隐私与安全(Privacy and Security)”的隐私(Privacy)中，在左侧找到“开发者工具(Developer Tools)”解锁后勾选右侧“终端(Terminal)”。开启此选项后才能在终端中运行未签名的代码。
 
-{{< image src="images/macOS-Privacy_and_Security_Setting-1.png" caption="macOS 隐私与安全设置 - 1" title="macOS Privacy & Security Setting - 1">}}
+{{< image src="images/macOS-Privacy_and_Security_Setting-1.webp" caption="macOS 隐私与安全设置 - 1" title="macOS Privacy & Security Setting - 1">}}
 
 为了能够正常进行代码调试，还需要关闭全局的签名检查
 
@@ -448,7 +448,7 @@ sudo spctl --master-disable
 
 并在系统偏好设置(System Preference)” → “安全与隐私(Security and Privacy)”的通用(General)选项卡中勾选“Anywhere”。
 
-{{< image src="images/macOS-Privacy_and_Security_Setting-2.png" caption="macOS 隐私与安全设置 - 2" title="macOS Privacy & Security Setting - 2">}}
+{{< image src="images/macOS-Privacy_and_Security_Setting-2.webp" caption="macOS 隐私与安全设置 - 2" title="macOS Privacy & Security Setting - 2">}}
 
 {{< admonition warning >}}
 
@@ -585,7 +585,7 @@ source "[OMNeT++ 存放路径]/omnetpp-6.0/setenv"
 
 OMNeT++6.0 安装后会自动添加 OMNeT++ IDE 和 Shell 的 `.desktop` 文件到 `~/.local/share/applications` 文件夹中，可以直接点击 Launcher 中的快捷方式启动 OMNeT++.
 
-{{< image src="images/Ubuntu-OMNeT++_Shortcut.png" caption="Ubuntu 中的 OMNeT++ 快捷方式" title="Ubuntu OMNeT++ Shortcut">}}
+{{< image src="images/Ubuntu-OMNeT++_Shortcut.webp" caption="Ubuntu 中的 OMNeT++ 快捷方式" title="Ubuntu OMNeT++ Shortcut">}}
 
 {{< /admonition >}}
 
@@ -593,11 +593,11 @@ OMNeT++6.0 安装后会自动添加 OMNeT++ IDE 和 Shell 的 `.desktop` 文件�
 
 切换工作路径到“omnetpp-6.0/samples/aloha”中，运行“./aloha”即可打开测试工程。运行之后会启动Qt仿真环境，在“Set Up Inifile Configuration”窗口任意选择一个配置运行即可。点击运行仿真，能够正常运行没有异常输出即表示环境配置基本正常。
 
-{{< image src="images/Validation_Command.png" caption="ALOHA 例程运行命令" title="Validation Command">}}
+{{< image src="images/Validation_Command.webp" caption="ALOHA 例程运行命令" title="Validation Command">}}
 
-{{< image src="images/Validation_Configure.png" caption="ALOHA 例程 QT 环境配置选择" title="Validation Configure">}}
+{{< image src="images/Validation_Configure.webp" caption="ALOHA 例程 QT 环境配置选择" title="Validation Configure">}}
 
-{{< image src="images/Validation_Scene.png" caption="ALOHA 例程 QT 环境运行效果" title="Validation Scene">}}
+{{< image src="images/Validation_Scene.webp" caption="ALOHA 例程 QT 环境运行效果" title="Validation Scene">}}
 
 [pwsh_github]: https://github.com/PowerShell/PowerShell/releases
 [vcxsrv_sourceforge]: https://sourceforge.net/projects/vcxsrv

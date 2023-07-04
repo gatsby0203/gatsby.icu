@@ -130,7 +130,7 @@ sudo firewall-cmd --permanent --add-port=22/tcp
 
 完成上述配置以后，在浏览器中输入服务器的 IP 或域名可以看到以下页面，说明 nginx 已经正常安装配置完成
 
-{{< image src="images/nginx_example_page.png" caption="Example Page" title="CentOS Nginx Example Page">}}
+{{< image src="images/nginx_example_page.webp" caption="Example Page" title="CentOS Nginx Example Page">}}
 
 > **注**：不同的 Linux 发行版展示的页面会有所不同。
 
@@ -162,7 +162,7 @@ sudo systemctl enable mysql # 设置 mysql 开机自启
 
 例如 CentOS 7 可以下载安装该源。
 
-{{< image src="images/mysql_yum_repositories.png" title="MySQL Yum Repositories">}}
+{{< image src="images/mysql_yum_repositories.webp" title="MySQL Yum Repositories">}}
 
 ```bash
 curl -sSLO https://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm

@@ -131,7 +131,7 @@ sudo firewall-cmd --permanent --add-port=22/tcp
 
 Now, enter the server's IP or domain name in a web browser, you will see the following page, witch indicating that Nginx has been successfully installed and configured.
 
-{{< image src="images/nginx_example_page.png" caption="Example Page" title="CentOS Nginx Example Page">}}
+{{< image src="images/nginx_example_page.webp" caption="Example Page" title="CentOS Nginx Example Page">}}
 
 > **Note**: This page may diverse in different Linux distributions. 
 
@@ -163,7 +163,7 @@ Some distributions do not include MySQL in repositories, but they probably inclu
 
 For example, CentOS 7 should install this package.
 
-{{< image src="images/mysql_yum_repositories.png" title="MySQL Yum Repositories">}}
+{{< image src="images/mysql_yum_repositories.webp" title="MySQL Yum Repositories">}}
 
 ```bash
 curl -sSLO https://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm
