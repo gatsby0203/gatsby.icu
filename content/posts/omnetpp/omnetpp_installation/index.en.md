@@ -10,7 +10,7 @@ categories:
 reward: false
 ---
 
-OMNeT++ is an extensible, modular, component-based C++ simulation library and framework, primarily for building network simulators.  This artical provides detailed instructions of how to install OMNeT++ on Windows, WSL, macOS, Linux.
+OMNeT++ is an extensible, modular, component-based C++ simulation library and framework, primarily for building network simulators.  This article provides detailed instructions of how to install OMNeT++ on Windows, WSL, macOS, Linux.
 
 <!--more-->
 
@@ -18,7 +18,7 @@ You can download the latest OMNeT++ 6.0.1 through the following links.
 
 {{< link href="https://github.com/omnetpp/omnetpp/releases/download/omnetpp-6.0.1/omnetpp-6.0.1-linux-x86_64.tgz" content="Linux" title="OMNeT++ for Linux" download="omnetpp-6.0.1-linux-x86_64.tgz">}} | {{< link href="https://github.com/omnetpp/omnetpp/releases/download/omnetpp-6.0.1/omnetpp-6.0.1-macos-x86_64.tgz" content="macOS" title="OMNeT++ for macOS" download="omnetpp-6.0.1-macos-x86_64.tgz">}} | {{< link href="https://github.com/omnetpp/omnetpp/releases/download/omnetpp-6.0.1/omnetpp-6.0.1-windows-x86_64.zip" content="Windows" title="OMNeT++ for Windows" download="omnetpp-6.0.1-windows-x86_64.tgz">}}
 
-## Confugure
+## Configure
 
 Extract the installation files and ensure that the target path contains only letters and underscores. Avoid using characters such as @ ? # $ & ( ) \ | : ; ‘ ’ “ ” < >, and it is preferable to avoid spaces and tabs. The default target path for extraction should be the final storage location for the program. Once the compilation and deployment are completed, it is recommended not to move the program. Otherwise, additional settings or reconfiguration and recompilation may be required.
 
@@ -376,7 +376,8 @@ sudo dnf install xdg-utils
 
 # SUSE openSUSE/SLES
 sudo zypper in xdg-utils
-``` 
+
+```
 
 After completing the steps mentioned above, you can refer to [Installation of OMNeT++ on Linux](#linux) to proceed with the installation. The final result of the installation should resemble the following.
 
@@ -418,12 +419,12 @@ sudo dnf install xdg-utils
 
 # SUSE openSUSE/SLES
 sudo zypper in xdg-utils
-``` 
+```
+
 Before running GUI programs in WSL, you need to start VcXsrv in Windows to provide an X-Window Server for WSL. Start VcXsrv and configure it with the following settings:
 
 1. Keep default settings on "Select display settings" and "Select how to start client" pages.
 2. In the "Extra settings" section, check "Disable access control".
-
 
 [Installation of OMNeT++ on Linux](#linux)
 
@@ -546,6 +547,7 @@ OMNeT++ offers several optional features that are not mandatory. You can choose 
     ```
 
 2. osgEarth (>=2.7) is a terrain rendering engine developed based on OpenSceneGraph, and it extends the functionality of OpenSceneGraph. However, not all Linux distribution repositories include osgEarth, and often it needs to be compiled and installed from source code.
+
     ``` bash
     # Debian-Based Debian 10/Ubuntu 20.04/Deepin
     sudo apt install openscenegraph-plugin-osgearth libosgearth-dev
