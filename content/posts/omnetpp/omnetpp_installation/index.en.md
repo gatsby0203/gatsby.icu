@@ -266,21 +266,21 @@ WITH_AKAROA=no
 
 After extracting the files, open "omnetpp-6.0/mingwenv.cmd". Upon running it for the first time, it will automatically extract and install the MinGW environment (without conflicting with any existing MinGW installations). Once the installation is complete, a new command prompt window will open automatically.
 
-{{< image src="images/Windows-OMNeT++_Compile-1.png" caption="Windows OMNeT++ Prompt" title="Windows OMNeT++ Compile - 1">}}
+{{< image src="images/Windows-OMNeT++_Compile-1.webp" caption="Windows OMNeT++ Prompt" title="Windows OMNeT++ Compile - 1">}}
 
 Since the Windows installation package already includes all the necessary dependencies, there is no need to install any additional packages. Simply follow the prompts and enter the `./configure` command, which will automatically generate the Makefile based on your current user configuration. Once the Makefile is generated, you can proceed with the compilation by entering `make` as instructed. The compilation process may take some time.
 
 You can set the `-j` parameter of `make`, which determines the number of parallel compilation tasks allowed to execute simultaneously. This allows for more efficient utilization of CPU resources and faster compilation. For example, you can use make `-j8` to allow a maximum of 8 compilation tasks to run simultaneously. You can set it to the number of CPU cores or supported threads, or use `make -j$(nproc)` to compile with the maximum number of processes allowed.
 
-{{< image src="images/Windows-OMNeT++_Compile-2.png" caption="Windows OMNeT++ configure Prompt" title="Windows OMNeT++ configure Prompt">}}
+{{< image src="images/Windows-OMNeT++_Compile-2.webp" caption="Windows OMNeT++ configure Prompt" title="Windows OMNeT++ configure Prompt">}}
 
-{{< image src="images/Windows-OMNeT++_Compile-3.png" caption="Windows OMNeT++ make Prompt" title="Windows OMNeT++ make Prompt">}}
+{{< image src="images/Windows-OMNeT++_Compile-3.webp" caption="Windows OMNeT++ make Prompt" title="Windows OMNeT++ make Prompt">}}
 
 {{< admonition tip >}}
 
 After compiling OMNeT++ 6.0, two shortcuts will be generated in the OMNeT++ folder. One shortcut is used to launch the IDE, and the other is used to launch the terminal. You can copy these shortcuts to your desktop for quick access to OMNeT++.
 
-{{< image src="images/Windows-OMNeT++_Shortcut.png" caption="Windows OMNeT++ Shortcut" title="Windows OMNeT++ Shortcut">}}
+{{< image src="images/Windows-OMNeT++_Shortcut.webp" caption="Windows OMNeT++ Shortcut" title="Windows OMNeT++ Shortcut">}}
 
 {{< /admonition >}}
 
@@ -312,7 +312,7 @@ wsl.exe --install [Linux distribution name]
 
 Fill in the [Linux distribution name] you want to install. You can use the command `wsl -l -o` to view all the online downloadable distributions currently provided by Microsoft.
 
-{{< image src="images/WSL-Supported_Distributions.png" caption="WSL Supported Linux Distribution" title="WSL Supported Distributions">}}
+{{< image src="images/WSL-Supported_Distributions.webp" caption="WSL Supported Linux Distribution" title="WSL Supported Distributions">}}
 
 {{< admonition tip >}}
 
@@ -330,7 +330,7 @@ The first time you install WSL, you need to restart your computer. After restart
 
 By default, Linux is installed on WSL2. You can use the command `wsl -l -v` to view the installed Linux distributions and their respective WSL versions.
 
-{{< image src="images/WSL-Installed_List.png" caption="WSL Installed List" title="WSL Installed List">}}
+{{< image src="images/WSL-Installed_List.webp" caption="WSL Installed List" title="WSL Installed List">}}
 
 If you already have a Linux distribution running on WSL1, you can upgrade it to run on WSL2.
 
@@ -381,7 +381,7 @@ sudo zypper in xdg-utils
 
 After completing the steps mentioned above, you can refer to [Installation of OMNeT++ on Linux](#linux) to proceed with the installation. The final result of the installation should resemble the following.
 
-{{< image src="images/WSL-WSLg_Home.png" caption="OMNeT++ on WSL+WSLg" title="WSL+WSLg OMNeT++ Installation">}}
+{{< image src="images/WSL-WSLg_Home.webp" caption="OMNeT++ on WSL+WSLg" title="WSL+WSLg OMNeT++ Installation">}}
 
 ##### Windows 10
 
@@ -432,7 +432,7 @@ Before running GUI programs in WSL, you need to start VcXsrv in Windows to provi
 
 Remember to start VcXsrv on Windows each time before running a GUI program. Then, you can proceed with [Installation of OMNeT++ on Linux](#linux). The final result of the installation should resemble the following:
 
-{{< image src="images/WSL-VcXsrv_Home.png" caption="OMNeT++ on WSL+VcXsrv" title="WSL+VcXsrv OMNeT++ Installation">}}
+{{< image src="images/WSL-VcXsrv_Home.webp" caption="OMNeT++ on WSL+VcXsrv" title="WSL+VcXsrv OMNeT++ Installation">}}
 
 ### macOS
 
@@ -459,7 +459,7 @@ In order to run unsigned code in the Terminal, some system setting is required.
 3. In the left sidebar, scroll down and find "Developer Tools", check the "Terminal".
 
 
-{{< image src="images/macOS-Privacy_and_Security_Setting-1.png" caption="macOS Privacy and Security Setting - 1" title="macOS Privacy & Security Setting - 1">}}
+{{< image src="images/macOS-Privacy_and_Security_Setting-1.webp" caption="macOS Privacy and Security Setting - 1" title="macOS Privacy & Security Setting - 1">}}
 
 To enable proper code debugging, it is necessary to disable global code signing enforcement
 
@@ -469,7 +469,7 @@ sudo spctl --master-disable
 
 Open "System Preferences" -> "Security & Privacy", check the "Anywhere" option in the "General" section.
 
-{{< image src="images/macOS-Privacy_and_Security_Setting-2.png" caption="macOS Privacy and Security Setting - 2" title="macOS Privacy & Security Setting - 2">}}
+{{< image src="images/macOS-Privacy_and_Security_Setting-2.webp" caption="macOS Privacy and Security Setting - 2" title="macOS Privacy & Security Setting - 2">}}
 
 {{< admonition warning >}}
 
@@ -606,7 +606,7 @@ source "[path to OMNeT++]/omnetpp-6.0/setenv"
 
 OMNeT++ 6.0 will automatically add the `.desktop` files for the OMNeT++ IDE and Shell to the `~/.local/share/applications` folder after installation, allowing you to directly launch OMNeT++ by clicking on the shortcuts in the Launcher.
 
-{{< image src="images/Ubuntu-OMNeT++_Shortcut.png" caption="Ubuntu 中的 OMNeT++ Shortcuts" title="Ubuntu OMNeT++ Shortcut">}}
+{{< image src="images/Ubuntu-OMNeT++_Shortcut.webp" caption="Ubuntu 中的 OMNeT++ Shortcuts" title="Ubuntu OMNeT++ Shortcut">}}
 
 {{< /admonition >}}
 
@@ -614,11 +614,11 @@ OMNeT++ 6.0 will automatically add the `.desktop` files for the OMNeT++ IDE and 
 
 Switch to the working directory to "omnetpp-6.0/samples/aloha", run "./aloha". After running it, the Qt simulation environment will start. In the "Set Up Inifile Configuration" window, you can choose any configuration and click on "Run Simulation" to execute the simulation. If it runs without any abnormal output, it indicates that the environment configuration is generally correct.
 
-{{< image src="images/Validation_Command.png" caption="Run ALOHA Example Command " title="Validation Command">}}
+{{< image src="images/Validation_Command.webp" caption="Run ALOHA Example Command " title="Validation Command">}}
 
-{{< image src="images/Validation_Configure.png" caption="ALOHA QT Enviroment Configure" title="Validation Configure">}}
+{{< image src="images/Validation_Configure.webp" caption="ALOHA QT Enviroment Configure" title="Validation Configure">}}
 
-{{< image src="images/Validation_Scene.png" caption="ALOHA Runing in QT Enviroment" title="Validation Scene">}}
+{{< image src="images/Validation_Scene.webp" caption="ALOHA Runing in QT Enviroment" title="Validation Scene">}}
 
 [pwsh_github]: https://github.com/PowerShell/PowerShell/releases
 [vcxsrv_sourceforge]: https://sourceforge.net/projects/vcxsrv
