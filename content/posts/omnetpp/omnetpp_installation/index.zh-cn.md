@@ -411,6 +411,7 @@ sudo zypper in xdg-utils
 ```
 
 在 WSL 中运行 GUI 程序之前，需要先在 Windows 中启动 VcXsrv，为WSL提供一个 X-Window Server. 启动VcXsrv并进行如下配置：
+
 1. “Select display settings”以及“Select how to start client”配置页面保持默认即可；
 2. 在“Extra settings”中勾选“Disable access control”。
 
