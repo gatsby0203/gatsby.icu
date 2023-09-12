@@ -532,7 +532,7 @@ OMNeT++ 有若干可选功能，这些功能并不是必须的，可以根据自
     sudo apt install openscenegraph-plugin-osgearth libosgearth-dev
 
     # RedHat系 仅 Fedora
-    sudo dnf osgearth-devel
+    sudo dnf install osgearth-devel
 
     # SUSE 不支持
 
@@ -545,7 +545,7 @@ OMNeT++ 有若干可选功能，这些功能并不是必须的，可以根据自
     sudo apt-get install mpi-default-dev
 
     # RedHat系 RHEL/CentOS/OracleLinux/Fedora/AlmaLinux/RockyLinux
-    sudo dnf openmpi-devel
+    sudo dnf install openmpi-devel
 
     # SUSE openSUSE/SLES
     sudo zypper install openmpi-devel
