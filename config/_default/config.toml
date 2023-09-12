@@ -2,7 +2,7 @@
 # Basic Configuration
 # Hugo Configuration See: https://gohugo.io/getting-started/configuration/
 # -------------------------------------------------------------------------------------
-title = "gatsby.icu"
+title = "Gatsby's Notes"
 baseURL = "http://localhost:1313"
 defaultContentLanguage = "en"
 # Default theme to be use when building the site with Hugo
