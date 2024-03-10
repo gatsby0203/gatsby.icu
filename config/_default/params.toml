@@ -11,8 +11,6 @@ description = "Gatsby's Notes"
 keywords = ["Gatsby", "Hugo", "FixIt"]
 # site default theme ["light", "dark", "auto"]
 defaultTheme = "auto"
-# public git repo url only then enableGitInfo is true
-gitRepo = "https://github.com/gatsby0203/gatsby.icu"
 # which hash function used for SRI, when empty, no SRI is used
 # ["sha256", "sha384", "sha512", "md5"]
 fingerprint = ""
@@ -29,6 +27,16 @@ externalIcon = false
 # FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
 # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
 disableThemeInject = false
+
+# Git repository information only then enableGitInfo is true
+[gitInfo]
+  repo = "https://github.com/gatsby0203/gatsby.icu"
+  branch = "docs"
+  # the content directory path relative to the root of the repository
+  dir = "content"
+  # the issue template for reporting issue of the posts
+  # available template params: {title} {URL} {sourceURL}
+  issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
 
 # App icon config
 [app]
@@ -226,12 +234,6 @@ disableThemeInject = false
     edit = true
     # the maximum number of lines of displayed code by default
     maxShownLines = 50
-  [page.edit]
-    enable = false
-    # Link for fork & edit
-    # url = "/edit/branch-name/subdirectory-name" # base on `gitRepo`
-    # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url
-    url = ""
   # Mapbox GL JS config (https://docs.mapbox.com/mapbox-gl-js)
   [page.mapbox]
     # access token of Mapbox GL JS
@@ -394,7 +396,7 @@ disableThemeInject = false
   enable = true
   permalink = "https://github.com/gatsby0203/gatsby.icu"
   title = "View source on GitHub"
-  position = "left" # ["left", "right"]
+  position = "right" # ["left", "right"]
 
 #Gravatar config
 [gravatar]
