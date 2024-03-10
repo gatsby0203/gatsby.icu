@@ -9,8 +9,33 @@
   isPlainText = true
   isHTML = false
 
+# Options to make output /archives/index.html file
+[archives]
+  path = "archives"
+  baseName = "index"
+  mediaType = "text/html"
+  isPlainText = false
+  isHTML = true
+  permalinkable = true
+
+# Options to make output /offline/index.html file
+[offline]
+  path = "offline"
+  baseName = "index"
+  mediaType = "text/html"
+  isPlainText = false
+  isHTML = true
+  permalinkable = true
+
+# Options to make output readme.md file
+[README]
+  baseName = "readme"
+  mediaType = "text/markdown"
+  isPlainText = true
+  isHTML = false
+
 # Options to make output baidu_urls.txt file
-[BaiduUrls]
+[baidu_urls]
   baseName = "baidu_urls"
   mediaType = "text/plain"
   isPlainText = true
