@@ -14,6 +14,7 @@ This page provides:
 - Wolfram Mathematica 11 Key Generator
 - Wolfram Mathematica 12 Key Generator
 - Wolfram Mathematica 13 Key Generator
+- Wolfram Mathematica 14 Key Generator
 - Wolfram System Modeler 12 Key Generator
 - Wolfram System Modeler 13 Key Generator
 
@@ -32,7 +33,7 @@ This Keygen is only for evaluation, please purchase the software on the [Officia
 <input type="radio" id="product-mma12" name="product" value="mma12">
 <label for="product-mma12">Mathematica 11/12</label><br>
 <input type="radio" id="product-mma13" name="product" value="mma13" checked>
-<label for="product-mma13">Mathematica 13</label><br>
+<label for="product-mma13">Mathematica 13/14</label><br>
 <input type="radio" id="product-sm" name="product" value="sm12">
 <label for="product-sm">System Modeler 12/13</label>
 </div>
