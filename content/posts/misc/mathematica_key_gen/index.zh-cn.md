@@ -14,6 +14,7 @@ categories:
 - Wolfram Mathematica 11 注册机
 - Wolfram Mathematica 12 注册机
 - Wolfram Mathematica 13 注册机
+- Wolfram Mathematica 14 注册机
 - Wolfram System Modeler 12 注册机
 - Wolfram System Modeler 13 注册机
 
@@ -32,7 +33,7 @@ categories:
     <input type="radio" id="product-mma12" name="product" value="mma12">
     <label for="product-mma12">Mathematica 11/12</label><br>
     <input type="radio" id="product-mma13" name="product" value="mma13" checked>
-    <label for="product-mma13">Mathematica 13</label><br>
+    <label for="product-mma13">Mathematica 13/14</label><br>
     <input type="radio" id="product-sm" name="product" value="sm12">
     <label for="product-sm">System Modeler 12/13</label>
 </div>
