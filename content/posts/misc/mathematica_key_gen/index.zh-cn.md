@@ -2,9 +2,9 @@
 title: Mathematica 注册机
 date: 2023-07-01T19:29:04+08:00
 type: posts
-tags: 
+tags:
     - Mathematica
-categories: 
+categories:
     - Misc
     - Tools
 ---
@@ -49,6 +49,19 @@ categories:
 > **注：** 一次不成功可以尝试多生成几次，填写 “Activation Key” 和 “Password” 时不能包含多余的空格。
 
 <script type="text/javascript">
+
+const magicNumbersMMA = [
+    0x29C2, 0x2FDB, 0x44F1, 0x60F0,
+    0x8250, 0x8C68, 0x8E3C, 0xA439,
+    0xA68B, 0xABEB, 0xD227, 0xDB75,
+    0xE4A8, 0xE756, 0xEE71
+];
+
+const magicNumbersSM = [
+    0x1330, 0x1361, 0x5770, 0x6188,
+    0x755E, 0x7C91, 0xA5CE, 0xAB0B,
+    0xBF47, 0xEEFE, 0xF536
+];
 
 const testSalt = (a, b, c) => {
     for (let i = 0; i < 8; i += 1) {
@@ -141,17 +154,17 @@ document.getElementById("generate").addEventListener("click", function () {
         document.getElementById("result").innerText = "Bad MathID!";
     } else {
         var activationKey = genActivationKey();
-        var magicNumbers;
         var software = document.querySelector("input[name=product]:checked").value;
+        var magicNumber;
         if (software === "mma12" || software === "mma13") {
-            magicNumbers = [10690, 12251, 17649, 24816, 33360, 35944, 36412, 42041, 42635, 44011, 53799, 56181, 58536, 59222, 61041];
+            magicNumber = magicNumbersMMA[Math.floor(Math.random() * magicNumbersMMA.length)]
         } else if (software === "sm12") {
-            magicNumbers = [4912, 4961, 22384, 24968, 30046, 31889, 42446, 43787, 48967, 61182, 62774];
+            magicNumber = magicNumbersSM[Math.floor(Math.random() * magicNumbersSM.length)]
+
         } else {
             document.getElementById("result").innerHTML = `<p>Unknown software suite: ${software}.</p>`;
             return;
         }
-        var magicNumber = magicNumbers[Math.floor(Math.random() * magicNumbers.length)]
         var password = genPassword(mathId + "$1&" + activationKey, magicNumber);
         document.getElementById("result").innerHTML = `
         <p>
