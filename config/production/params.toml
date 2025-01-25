@@ -24,11 +24,16 @@
     recaptchaV3Key = ""
     reaction = false
 
-# Busuanzi count
-[ibruce]
+# FixIt 0.3.10 | NEW Busuanzi count
+[busuanzi]
+  # whether to enable busuanzi count
   enable = true
-  # Enable in post meta
-  enablePost = true
+  # busuanzi count core script source. Default is https://vercount.one/js
+  source = "https://vercount.one/js"
+  # whether to show the site views
+  siteViews = true
+  # whether to show the page views
+  pageViews = true
 
 # CDN config for third-party library files
 [cdn]
