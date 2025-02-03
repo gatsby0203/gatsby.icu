@@ -426,10 +426,6 @@ Before running GUI programs in WSL, you need to start VcXsrv in Windows to provi
 1. Keep default settings on "Select display settings" and "Select how to start client" pages.
 2. In the "Extra settings" section, check "Disable access control".
 
-[Installation of OMNeT++ on Linux](#linux)
-
-配置完成后启动 VcXsrv，注意每次运行GUI程序之前需要先在 Windows 上启动 VcXsrv。之后参照 [Linux 下的 OMNeT++ 的安装](#linux) 进行安装即可,最终安装完成后的效果如下：
-
 Remember to start VcXsrv on Windows each time before running a GUI program. Then, you can proceed with [Installation of OMNeT++ on Linux](#linux). The final result of the installation should resemble the following:
 
 {{< image src="images/WSL-VcXsrv_Home.webp" caption="OMNeT++ on WSL+VcXsrv" title="WSL+VcXsrv OMNeT++ Installation">}}
