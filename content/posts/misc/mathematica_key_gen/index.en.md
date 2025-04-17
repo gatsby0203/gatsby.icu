@@ -1,22 +1,19 @@
 ---
 title: Mathematica Key Generator
-date: 2023-07-01T19:29:04+08:00
+date: 2025-04-16T14:55:04+08:00
 type: posts
-tags: 
+tags:
     - Mathematica
-categories: 
+categories:
     - Misc
     - Tools
 ---
 
 This page provides:
 
-- Wolfram Mathematica 11 Key Generator
-- Wolfram Mathematica 12 Key Generator
-- Wolfram Mathematica 13 Key Generator
-- Wolfram Mathematica 14 Key Generator
-- Wolfram System Modeler 12 Key Generator
-- Wolfram System Modeler 13 Key Generator
+- Wolfram Mathematica 10.0-14.1+ Key Generator
+- Wolfram System Modeler 4.0-14.1+ Key Generator
+- Wolfram MathLM 10.0-14.0+ Key Generator
 
 <!--more-->
 
@@ -28,141 +25,6 @@ This Keygen is only for evaluation, please purchase the software on the [Officia
 
 {{< /admonition >}}
 
-<div class="form-inline">
-<p style="margin-bottom: 0;">Select product:</p>
-<input type="radio" id="product-mma12" name="product" value="mma12">
-<label for="product-mma12">Mathematica 11/12</label><br>
-<input type="radio" id="product-mma13" name="product" value="mma13" checked>
-<label for="product-mma13">Mathematica 13/14</label><br>
-<input type="radio" id="product-sm" name="product" value="sm12">
-<label for="product-sm">System Modeler 12/13</label>
-</div>
-
-Enter your MathID below and press **Generate**.
-
-<input type="text" id="mathId" placeholder="XXXX-XXXXX-XXXXX"/>
-
-<button id="generate" class="btn btn--primary">Generate</button>
-
-<p id="result"></p>
-
-> **NOTE:** Try regenerate if it was failed to activate, and do not include extra spaces when filling in the "Activation Key" and "Password".
-
-<script type="text/javascript">
-
-const testSalt = (a, b, c) => {
-    for (let i = 0; i < 8; i += 1) {
-        const t = (b >> i) & 1
-        if (t + ((a - t) & ~1) === a) {
-            a = (a - t) >> 1
-        } else {
-            a = ((c - t) ^ a) >> 1
-        }
-    }
-
-    return a
-}
-
-const genPassword = (string, salt) => {
-    const uuid = string.split('').map(x => x.charCodeAt())
-
-    let salt1 = salt
-    for (let i = uuid.length - 1; i >= 0; i -= 1) {
-        salt1 = testSalt(salt1, uuid[i], 0x105C3)
-    }
-
-    let offset1 = 0
-    while (testSalt(testSalt(salt1, offset1 & 0xFF, 0x105C3), offset1 >> 8, 0x105C3) !== 0xA5B6) {
-        offset1 += 1
-        if (offset1 >= 0xFFFF) {
-            return 'Error'
-        }
-    }
-
-    offset1 = parseInt(((offset1 + 0x72FA) & 0xFFFF) * 99999 / 0xFFFF, 10)
-    offset1 = `0000${offset1}`.substr(-5)
-
-    let salt2 = `${offset1.substr(0, 2)}${offset1.substr(3, 2)}${offset1.substr(2, 1)}`
-    salt2 = parseInt(salt2, 10)
-    salt2 = parseInt((salt2 / 99999.0) * 0xFFFF, 10) + 1
-    salt2 = testSalt(testSalt(0, salt2 & 0xFF, 0x1064B), salt2 >> 8, 0x1064B)
-    for (let i = uuid.length - 1; i >= 0; i -= 1) {
-        salt2 = testSalt(salt2, uuid[i], 0x1064B)
-    }
-
-    let offset2 = 0
-    while (testSalt(testSalt(salt2, offset2 & 0xFF, 0x1064B), offset2 >> 8, 0x1064B) !== 0xA5B6) {
-        offset2 += 1
-        if (offset2 >= 0xFFFF) {
-            return 'Error'
-        }
-    }
-
-    offset2 = parseInt((offset2 & 0xFFFF) * 99999 / 0xFFFF, 10)
-    offset2 = `0000${offset2}`.substr(-5)
-
-    const password = [
-        offset2[3],
-        offset1[3],
-        offset1[1],
-        offset1[0],
-        '-',
-        offset2[4],
-        offset1[2],
-        offset2[0],
-        '-',
-        offset2[2],
-        offset1[4],
-        offset2[1],
-        '::1'
-    ]
-
-    return password.join('')
-}
-
-function checkMathId(s) {
-    const re = new RegExp("^[0-9]{4}-[0-9]{5}-[0-9]{5}");
-    return re.test(s);
-}
-
-function genActivationKey() {
-    s = "";
-    for (let i = 0; i < 14; i++) {
-        s += Math.floor(Math.random() * 10);
-        if (i === 3 || i === 7)
-            s += "-";
-    }
-    return s;
-}
-
-document.getElementById("generate").addEventListener("click", function () {
-    var mathId = document.getElementById("mathId").value.trim();
-    if (!checkMathId(mathId)) {
-        document.getElementById("result").innerText = "Bad MathID!";
-    } else {
-        var activationKey = genActivationKey();
-        var magicNumbers;
-        var software = document.querySelector("input[name=product]:checked").value;
-        if (software === "mma12" || software === "mma13") {
-            magicNumbers = [10690, 12251, 17649, 24816, 33360, 35944, 36412, 42041, 42635, 44011, 53799, 56181, 58536, 59222, 61041];
-        } else if (software === "sm12") {
-            magicNumbers = [4912, 4961, 22384, 24968, 30046, 31889, 42446, 43787, 48967, 61182, 62774];
-        } else {
-            document.getElementById("result").innerHTML = `<p>Unknown software suite: ${software}.</p>`;
-            return;
-        }
-        var magicNumber = magicNumbers[Math.floor(Math.random() * magicNumbers.length)]
-        var password = genPassword(mathId + "$1&" + activationKey, magicNumber);
-        document.getElementById("result").innerHTML = `
-        <p>
-        <b>Activation Key</b>: ${activationKey}
-        <br>
-        <b>Password</b>: ${password}
-        </p>
-        `;
-    }
-});
-</script>
 
 {{< admonition tip "How to Use" false >}}
 
@@ -172,3 +34,121 @@ On Mathematica Activation page, select "Manually Activation", use the MathID to 
 {{< image src="images/Mathematica-Activation_2.webp" caption="Mathematica Activation - 1" title="Mathematica Activation - 1">}}
 
 {{< /admonition >}}
+
+<link rel="stylesheet" href="/mathematica_key_gen/form-style.css">
+
+<form id="keygen-form">
+   <fieldset>
+      <label for="salt">
+      产品类型 <span class="req">*</span>
+      </label>
+      <select id="salt" required onchange="updateFields()">
+         <option value="">Please select the product to activate</option>
+         <option value="mathematica:14.1+" data-type="mathematica" data-ver="14.1+">Mathematica 14.1+</option>
+         <option value="mathematica:13.0-14.1" data-type="mathematica" data-ver="13.0-14.1">Mathematica 13.0-14.1</option>
+         <option value="mathematica:12.0-13.0+" data-type="mathematica" data-ver="12.0-13.0+">Mathematica 12.0-13.0+</option>
+         <option value="mathematica:10.2-12.0" data-type="mathematica" data-ver="10.2-12.0">Mathematica 10.2-12.0</option>
+         <option value="mathematica:10.0-10.2" data-type="mathematica" data-ver="10.0-10.2">Mathematica 10.0-10.2</option>
+         <option value="system-modeler:14.1+" data-type="system-modeler" data-ver="14.1+">System Modeler 14.1+</option>
+         <option value="system-modeler:13.0-14.1" data-type="system-modeler" data-ver="13.0-14.1">System Modeler 13.0-14.1</option>
+         <option value="system-modeler:5.0-13.0" data-type="system-modeler" data-ver="5.0-13.0">System Modeler 5.0-13.0</option>
+         <option value="system-modeler:4.0-5.0" data-type="system-modeler" data-ver="4.0-5.0">System Modeler 4.0-5.0</option>
+         <option value="mathlm:10.0-14.0+" data-type="mathlm" data-ver="10.0-14.0+">MathLM 10.0-14.0+</option>
+      </select>
+      <div id="fields" class="hidden">
+         <label for="mathid">
+            MathID <span class="req">*</span>
+            <button class="info-btn" onclick="toggleTip(this)"><span class="info-char">?</span></button>
+            <div class="tooltip-box hidden">
+               <p>Format is <code>nnnn-nnnnn-nnnnn</code>, which is the unique device identifier, for example <code>1234-56789-01234</code>.</p>
+            </div>
+         </label>
+         <input type="text" id="mathid" pattern="\d{4}-\d{5}-\d{5}" required />
+         <label for="actkey">
+            Activation Key <span class="req">*</span>
+            <button class="info-btn" onclick="toggleTip(this)"><span class="info-char">?</span></button>
+            <div class="tooltip-box hidden">
+               <p>Format is <code>nnnn-nnnn-xxxxxx</code>, where <code>x</code> can be any digit or uppercase letter. The default value is fine if you have no specific requirements.</p>
+            </div>
+         </label>
+         <input type="text" id="actkey" placeholder="" pattern="\d{4}-\d{4}-[0-9A-Z]{6}" required/>
+         <label for="lictype">
+            License Type <span id="lictype-req" class="req hidden">*</span>
+            <button class="info-btn" onclick="toggleTip(this)"><span class="info-char">?</span></button>
+            <div class="tooltip-box hidden">
+               <p>Enter the hexadecimal license type. For versions 14.0 and earlier, leaving this field empty defaults to Professional edition. For Mathematica 14.1 and later versions, this field is required.</p>
+               <table>
+               <thead>
+                  <tr>
+                     <th>Value</th>
+                     <th>Meaning</th>
+                     <th>Usage Scenario</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr><td>4</td><td>Student</td><td>Student Edition License</td></tr>
+                  <tr><td>10</td><td>Playe</td><td>Wolfram Player License (for version 13 and earlier)</td></tr>
+                  <tr><td>20</td><td>Player</td><td>Wolfram Player License (for version 14.1 and later)</td></tr>
+                  <tr><td>40</td><td>Player Pro</td><td>Wolfram Player Pro License</td></tr>
+                  <tr><td>800</td><td>Home</td><td>Home Edition License</td></tr>
+                  <tr><td>1000</td><td>Enterprise</td><td>Enterprise License (for version 13 and earlier, limited functionality)</td></tr>
+                  <tr><td>2000</td><td>Enterprise</td><td>Enterprise License (for version 14.1 and later, supports EnterpriseCDF export etc.)</td></tr>
+                  <tr><td>80000</td><td>Wolfram Engine</td><td>Wolfram Engine License (free, for non-GUI frontend environments)</td></tr>
+                  <tr><td>100000</td><td>Wolfram|Alpha Notebook Edition</td><td>Wolfram|Alpha Notebook Edition License (for version 14.1 and later)</td></tr>
+                  <tr><td>200000</td><td>Wolfram|One</td><td>Wolfram|One License (for version 14.1 and later)</td></tr>
+                  <tr><td>400000</td><td>Wolfram Finance Platform</td><td>Wolfram Finance Platform License (for version 14.1 and later)</td></tr>
+                  <tr><td>800000</td><td>Mathematica</td><td>Mathematica License (for version 14.1 and later)</td></tr>
+               </tbody>
+               </table>
+               <p>These values can be combined by addition. For example, <code>800000 + 2000 + 1000 = 803000</code> represents a Mathematica license with Enterprise functionality.</p>
+            </div>
+         </label>
+         <input type="text" id="lictype" placeholder=""/>
+         <label for="licclass" id="licclass-lbl" class="hidden">
+            License Class <span class="req">*</span>
+            <button class="info-btn" onclick="toggleTip(this)"><span class="info-char">?</span></button>
+            <div class="tooltip-box hidden">
+               <p>Only fill in when <strong>MathLM</strong> is selected, used to specify client type. One Activation Key can assign one license for each category (A, X, B, C, M) without conflicts</p>
+               <thead>
+               <tr>
+                  <th>Category</th>
+                  <th>Meaning</th>
+                  <th>Usage Scenario</th>
+                  <th>Supported Client Level</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr><td>CA</td><td>Class A</td><td>Desktop System License (Windows/macOS/Linux)</td><td>A</td></tr>
+               <tr><td>CX</td><td>Class X</td><td>Extended Desktop License</td><td>A, X</td></tr>
+               <tr><td>CB</td><td>Class B</td><td>Server System License</td><td>A, X, B</td></tr>
+               <tr><td>CC</td><td>Class C</td><td>Universal License, usable for all Mathematica clients</td><td>A, X, B, C</td></tr>
+               <tr><td>CM</td><td>Class M</td><td>System Modeler License</td><td>System Modeler Exclusive License</td></tr>
+            </tbody>
+            </table>
+               <p>For most <strong>MathLM</strong> application scenarios, only the following two <code>License Class</code> configurations are needed:</p>
+               <ul>
+               <li>
+                  <strong>Class C</strong>: Applicable to all <strong>Mathematica clients</strong><br>
+                  <span style="color: gray;">(Such as MathKernel, Mathematica frontend, parallel subkernels, etc.)</span>
+               </li>
+               <li>
+                  <strong>Class M</strong>: Applicable to all <strong>System Modeler clients</strong><br>
+                  <span style="color: gray;">(Such as Modeling Center, Simulation Center, Session Manager, etc.)</span>
+               </li>
+               </ul>
+            </div>
+         </label>
+         <input type="text" id="licclass" class="hidden" placeholder=""/>
+         <button id="submit-btn" type="submit">生成 Password</button>
+      </div>
+   </fieldset>
+</form>
+<fieldset id="output-fieldset" class="hidden">
+  <legend>Password</legend>
+  <pre><code id="output-passwd"></code></pre>
+</fieldset>
+</form>
+
+<script src="/mathematica_key_gen/wolfram-keygen.js"></script>
+
+> **Note:** If unsuccessful on the first try, you can generate multiple times. When entering the "Activation Key" and "Password", make sure there are no extra spaces.
