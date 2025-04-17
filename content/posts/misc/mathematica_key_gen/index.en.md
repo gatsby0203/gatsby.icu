@@ -40,7 +40,7 @@ On Mathematica Activation page, select "Manually Activation", use the MathID to 
 <form id="keygen-form">
    <fieldset>
       <label for="salt">
-      产品类型 <span class="req">*</span>
+      Product <span class="req">*</span>
       </label>
       <select id="salt" required onchange="updateFields()">
          <option value="">Please select the product to activate</option>
