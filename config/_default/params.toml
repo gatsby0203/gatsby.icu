@@ -28,10 +28,16 @@ externalIcon = false
 # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
 disableThemeInject = false
 
+[author]
+  name = "Gatsby"
+  email = "mail@gatsby.icu"
+  link = "http://gatsby.icu"
+  avatar = "/images/avatar.webp"
+
 # Git repository information only then enableGitInfo is true
 [gitInfo]
   repo = "https://github.com/gatsby0203/gatsby.icu"
-  branch = "docs"
+  branch = "main"
   # the content directory path relative to the root of the repository
   dir = "content"
   # the issue template for reporting issue of the posts
@@ -357,9 +363,9 @@ disableThemeInject = false
 #Site SEO config
 [seo]
   # image URL
-  image = ""
+  image = "/social-card.webp"
   # thumbnail URL
-  thumbnailUrl = "/logo.png"
+  thumbnailUrl = "/logo-thumbnail.webp"
 
 # Analytics config
 [analytics]

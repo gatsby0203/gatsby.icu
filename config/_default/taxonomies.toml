@@ -1,6 +1,8 @@
 # -------------------------------------------------------------------------------------
-# Author Configuration
+# Taxonomies Configuration
+# See: https://gohugo.io/content-management/taxonomies/#configure-taxonomies
 # -------------------------------------------------------------------------------------
-name = "Gatsby"
-link = "http://gatsby.icu"
-avatar = "/images/avatar.png"
+
+category = "categories"
+tag = "tags"
+collection = "collections"
