@@ -25,13 +25,21 @@ This Keygen is only for evaluation, please purchase the software on the [Officia
 
 {{< /admonition >}}
 
-
 {{< admonition tip "How to Use" false >}}
 
-On Mathematica Activation page, select "Manually Activation", use the MathID to generate "Activation Key" and "Password"。
+1. On the Mathematica activation window, select “**Activate offline through an activation key and requested password**”.
+2. You will see a string labeled `Your MachineID`, which uniquely identifies your device. Click the copy button next to it and paste the value into the keygen.
+   {{< image src="images/Mathematica-Activation_1.webp" caption="Mathematica Activation - 1" title="Mathematica Activation - 1">}}
+3. In the keygen, enter any valid `Activation Key` in the format:
 
-{{< image src="images/Mathematica-Activation_1.webp" caption="Mathematica Activation - 1" title="Mathematica Activation - 1">}}
-{{< image src="images/Mathematica-Activation_2.webp" caption="Mathematica Activation - 1" title="Mathematica Activation - 1">}}
+   ```shell
+   nnnn-nnnn-xxxxxx
+   ```
+
+   where `n` is a digit and `x` is an uppercase letter or digit.
+4. The keygen will generate a corresponding `Password` based on the `MachineID` and `Activation Key`.
+5. Copy the generated Password into the Mathematica activation interface and click Activate to complete the process.
+   {{< image src="images/Mathematica-Activation_2.webp" caption="Mathematica Activation - 2" title="Mathematica Activation - 2">}}
 
 {{< /admonition >}}
 
@@ -56,14 +64,14 @@ On Mathematica Activation page, select "Manually Activation", use the MathID to 
          <option value="mathlm:10.0-14.0+" data-type="mathlm" data-ver="10.0-14.0+">MathLM 10.0-14.0+</option>
       </select>
       <div id="fields" class="hidden">
-         <label for="mathid">
-            MathID <span class="req">*</span>
+         <label for="machid">
+            MachineID <span class="req">*</span>
             <button class="info-btn" onclick="toggleTip(this)"><span class="info-char">?</span></button>
             <div class="tooltip-box hidden">
                <p>Format is <code>nnnn-nnnnn-nnnnn</code>, which is the unique device identifier, for example <code>1234-56789-01234</code>.</p>
             </div>
          </label>
-         <input type="text" id="mathid" pattern="\d{4}-\d{5}-\d{5}" required />
+         <input type="text" id="machid" pattern="\d{4}-\d{5}-\d{5}" required />
          <label for="actkey">
             Activation Key <span class="req">*</span>
             <button class="info-btn" onclick="toggleTip(this)"><span class="info-char">?</span></button>

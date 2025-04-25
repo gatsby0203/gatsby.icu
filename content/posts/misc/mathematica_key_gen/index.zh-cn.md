@@ -27,10 +27,19 @@ categories:
 
 {{< admonition tip "使用方法" false >}}
 
-在 Mathematica 激活页面选择“Manually Activation”手动激活，复制 MathID 并填入注册机生成对应的 “Activation Key” 和 “Password” 即可。
+1. 打开 Mathematica 激活窗口后，点击 “**Activate offline through an activation key and requested password**”（通过激活码和密码离线激活）选项。
+2. 在激活界面中，你将看到一个名为 `Your MachineID` 的字符串，它是设备的唯一识别码。点击右侧的复制按钮，将其粘贴到注册机对应位置。
+   {{< image src="images/Mathematica-Activation_1.webp" caption="Mathematica Activation - 1" title="Mathematica Activation - 1">}}
+3. 在注册机中输入任意格式合法的 `Activation Key`（激活码），格式如下：
 
-{{< image src="images/Mathematica-Activation_1.webp" caption="Mathematica Activation - 1" title="Mathematica Activation - 1">}}
-{{< image src="images/Mathematica-Activation_2.webp" caption="Mathematica Activation - 1" title="Mathematica Activation - 1">}}
+   ```shell
+   nnnn-nnnn-xxxxxx
+   ```
+
+   其中 n 表示数字，x 表示大写字母或数字。
+4. 注册机会根据 `MachineID` 和 `Activation Key` 生成对应的 `Password`（密码）。
+5. 将生成的 `Password` 填入 Mathematica 的激活界面，点击 `Activate` 即可完成激活。
+   {{< image src="images/Mathematica-Activation_2.webp" caption="Mathematica Activation - 2" title="Mathematica Activation - 2">}}
 
 {{< /admonition >}}
 
@@ -55,14 +64,14 @@ categories:
          <option value="mathlm:10.0-14.0+" data-type="mathlm" data-ver="10.0-14.0+">MathLM 10.0-14.0+</option>
       </select>
       <div id="fields" class="hidden">
-         <label for="mathid">
-            MathID <span class="req">*</span>
+         <label for="machid">
+            MachineID <span class="req">*</span>
             <button class="info-btn" onclick="toggleTip(this)"><span class="info-char">?</span></button>
             <div class="tooltip-box hidden">
                <p>格式为 <code>nnnn-nnnnn-nnnnn</code>，是设备唯一识别码，例如 <code>1234-56789-01234</code>。</p>
             </div>
          </label>
-         <input type="text" id="mathid" pattern="\d{4}-\d{5}-\d{5}" required />
+         <input type="text" id="machid" pattern="\d{4}-\d{5}-\d{5}" required />
          <label for="actkey">
             Activation Key <span class="req">*</span>
             <button class="info-btn" onclick="toggleTip(this)"><span class="info-char">?</span></button>

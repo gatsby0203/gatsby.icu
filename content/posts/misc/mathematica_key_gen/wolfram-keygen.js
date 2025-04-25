@@ -17,7 +17,7 @@ const SALT_MAP = {
     'mathlm:10.0-14.0+': ['0x72A4', '0x29A5', '0x140A', '0x3FD1', '0x452D', '0x541A', '0x3575', '0x7F8C', '0x6587', '0x5B29']
 };
 
-document.getElementById('mathid').addEventListener('input', function () {
+document.getElementById('machid').addEventListener('input', function () {
     this.checkValidity();
 });
 
@@ -262,7 +262,7 @@ function genPass(event) {
     }
     const salt = saltList[saltIndexMap[saltKey]];
     const isEverywhere = type === 'mathlm';
-    const mathId = document.getElementById('mathid').value.trim();
+    const mathId = document.getElementById('machid').value.trim();
     const actKey = document.getElementById('actkey').value.trim();
     // const maxProcs = document.querySelector('#max-lic-procs').value;
     const maxProcs = "";
