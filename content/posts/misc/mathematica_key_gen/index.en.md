@@ -147,7 +147,7 @@ This Keygen is only for evaluation, please purchase the software on the [Officia
             </div>
          </label>
          <input type="text" id="licclass" class="hidden" placeholder=""/>
-         <button id="submit-btn" type="submit">生成 Password</button>
+         <button id="submit-btn" type="submit">Generate Password</button>
       </div>
    </fieldset>
 </form>
